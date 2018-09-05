@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MAGIC.TTF">
+            <string>Magic:theGathering</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Launch Screen View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LaunchScreenViewController" customModule="MagicTheGatheringDeckBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mtgLogo" translatesAutoresizingMaskIntoConstraints="NO" id="gh9-gn-oR1">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yag-aJ-vcG">
+                                <rect key="frame" x="40" y="80" width="295" height="107.5"/>
+                                <string key="text">Magic The gathering
+
+Deck Builder</string>
+                                <fontDescription key="fontDescription" name="Magic:theGathering" family="Magic:the Gathering" pointSize="35"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="enter" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e39-KX-aRt">
+                                <rect key="frame" x="140" y="554" width="95" height="53"/>
+                                <fontDescription key="fontDescription" name="Magic:theGathering" family="Magic:the Gathering" pointSize="40"/>
+                                <state key="normal" title="Enter">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="fromLaunchTomenuSegue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ETA-es-4R1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gh9-gn-oR1" secondAttribute="bottom" id="1UO-tF-lqm"/>
+                            <constraint firstItem="e39-KX-aRt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="723-KP-oHc"/>
+                            <constraint firstItem="yag-aJ-vcG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="9w1-wC-Mqo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="e39-KX-aRt" secondAttribute="bottom" constant="60" id="L5m-tv-Puj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yag-aJ-vcG" secondAttribute="trailing" constant="40" id="Oif-gw-pMP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gh9-gn-oR1" secondAttribute="trailing" id="aqE-7n-a5L"/>
+                            <constraint firstItem="gh9-gn-oR1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gtl-Fn-DBC"/>
+                            <constraint firstItem="yag-aJ-vcG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="ppv-PI-Tio"/>
+                            <constraint firstItem="gh9-gn-oR1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qTm-kQ-Cz0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e39-KX-aRt" secondAttribute="trailing" constant="140" id="uro-xa-Oe3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundLaunchScreen" destination="gh9-gn-oR1" id="wpj-rV-6UI"/>
+                        <outlet property="boutonLaunchScreen" destination="e39-KX-aRt" id="o4I-qm-P4R"/>
+                        <outlet property="titreLaunchScreen" destination="yag-aJ-vcG" id="ogS-Cb-jd1"/>
+                        <segue destination="dCj-Vy-6ht" kind="show" identifier="fromLaunchToMenuSegue" id="bAT-ZL-1RN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3340" y="125"/>
+        </scene>
+        <!--Login Menu View Controller-->
+        <scene sceneID="ciS-8y-wRg">
+            <objects>
+                <viewController id="Emy-H6-8zT" customClass="LoginMenuViewController" customModule="MagicTheGatheringDeckBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SQY-Kp-WgC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mtgElements" translatesAutoresizingMaskIntoConstraints="NO" id="EZY-X3-hau">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5D-ZT-dYf">
+                                <rect key="frame" x="100" y="441" width="175" height="53"/>
+                                <fontDescription key="fontDescription" name="Magic:theGathering" family="Magic:the Gathering" pointSize="40"/>
+                                <state key="normal" title="Sign up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wPP-hW-mfC" kind="show" identifier="SignUpSegue" id="tcd-Nv-zcj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWx-OZ-9PB">
+                                <rect key="frame" x="100" y="544" width="175" height="53"/>
+                                <fontDescription key="fontDescription" name="Magic:theGathering" family="Magic:the Gathering" pointSize="40"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="PNS-Lp-psp" kind="show" identifier="LoginSegue" id="taZ-Xh-Znd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdb-yy-dMV">
+                                <rect key="frame" x="40" y="124" width="295" height="107.5"/>
+                                <string key="text">Magic The gathering
+
+Deck Builder</string>
+                                <fontDescription key="fontDescription" name="Magic:theGathering" family="Magic:the Gathering" pointSize="35"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome traveller, mays i ask you to identify yourself?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odk-x3-m1m">
+                                <rect key="frame" x="40" y="281.5" width="295" height="49.5"/>
+                                <fontDescription key="fontDescription" name="Magic:theGathering" family="Magic:the Gathering" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f6D-uk-Tt6" firstAttribute="trailing" secondItem="odk-x3-m1m" secondAttribute="trailing" constant="40" id="1XK-YQ-LD9"/>
+                            <constraint firstItem="UWx-OZ-9PB" firstAttribute="top" secondItem="x5D-ZT-dYf" secondAttribute="bottom" constant="50" id="1ZA-7L-QyK"/>
+                            <constraint firstItem="odk-x3-m1m" firstAttribute="top" secondItem="bdb-yy-dMV" secondAttribute="bottom" constant="50" id="3EE-56-jFm"/>
+                            <constraint firstItem="f6D-uk-Tt6" firstAttribute="trailing" secondItem="x5D-ZT-dYf" secondAttribute="trailing" constant="100" id="5Cv-AT-coP"/>
+                            <constraint firstItem="x5D-ZT-dYf" firstAttribute="leading" secondItem="f6D-uk-Tt6" secondAttribute="leading" constant="100" id="6hS-eT-uht"/>
+                            <constraint firstItem="f6D-uk-Tt6" firstAttribute="trailing" secondItem="UWx-OZ-9PB" secondAttribute="trailing" constant="100" id="9Nt-0M-RWi"/>
+                            <constraint firstItem="UWx-OZ-9PB" firstAttribute="leading" secondItem="f6D-uk-Tt6" secondAttribute="leading" constant="100" id="Bq3-Mb-K22"/>
+                            <constraint firstItem="f6D-uk-Tt6" firstAttribute="bottom" secondItem="EZY-X3-hau" secondAttribute="bottom" id="RLO-mS-Akb"/>
+                            <constraint firstItem="EZY-X3-hau" firstAttribute="top" secondItem="f6D-uk-Tt6" secondAttribute="top" id="Utx-4m-3Qg"/>
+                            <constraint firstItem="EZY-X3-hau" firstAttribute="leading" secondItem="f6D-uk-Tt6" secondAttribute="leading" id="Z5U-38-l9n"/>
+                            <constraint firstItem="f6D-uk-Tt6" firstAttribute="trailing" secondItem="EZY-X3-hau" secondAttribute="trailing" id="gUH-d7-drM"/>
+                            <constraint firstItem="f6D-uk-Tt6" firstAttribute="bottom" secondItem="UWx-OZ-9PB" secondAttribute="bottom" constant="70" id="lf8-Lv-goN"/>
+                            <constraint firstItem="bdb-yy-dMV" firstAttribute="top" secondItem="f6D-uk-Tt6" secondAttribute="top" constant="60" id="p1a-hf-MoX"/>
+                            <constraint firstItem="bdb-yy-dMV" firstAttribute="leading" secondItem="f6D-uk-Tt6" secondAttribute="leading" constant="40" id="sQI-oy-6gQ"/>
+                            <constraint firstItem="f6D-uk-Tt6" firstAttribute="trailing" secondItem="bdb-yy-dMV" secondAttribute="trailing" constant="40" id="sYb-FO-VkW"/>
+                            <constraint firstItem="odk-x3-m1m" firstAttribute="leading" secondItem="f6D-uk-Tt6" secondAttribute="leading" constant="40" id="vDp-mF-B8H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="f6D-uk-Tt6"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zL9-fb-3bg"/>
+                    <connections>
+                        <outlet property="backgroundLogin" destination="EZY-X3-hau" id="lvS-WZ-brE"/>
+                        <outlet property="loginButtonLogin" destination="UWx-OZ-9PB" id="ViA-tB-4wp"/>
+                        <outlet property="signupButtonLogin" destination="x5D-ZT-dYf" id="BsR-O3-dNY"/>
+                        <outlet property="texteLogin" destination="odk-x3-m1m" id="Snw-Hh-ydU"/>
+                        <outlet property="titreLogin" destination="bdb-yy-dMV" id="e6Z-Un-MRH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="otC-KD-Sbc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3340" y="-722"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="G3A-hx-G0G">
+            <objects>
+                <viewController id="wPP-hW-mfC" customClass="SignUpViewController" customModule="MagicTheGatheringDeckBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SEF-Xr-fMX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mtgElements" translatesAutoresizingMaskIntoConstraints="NO" id="ceH-6M-L4v">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Jk-ae-s94">
+                                <rect key="frame" x="40" y="124" width="295" height="41"/>
+                                <fontDescription key="fontDescription" name="Magic:theGathering" family="Magic:the Gathering" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="ceH-6M-L4v" firstAttribute="trailing" secondItem="MiI-OF-X3S" secondAttribute="trailing" id="YOH-FL-tby"/>
+                            <constraint firstItem="MiI-OF-X3S" firstAttribute="trailing" secondItem="3Jk-ae-s94" secondAttribute="trailing" constant="40" id="dQo-LR-TGc"/>
+                            <constraint firstItem="ceH-6M-L4v" firstAttribute="bottom" secondItem="MiI-OF-X3S" secondAttribute="bottom" id="fOp-3l-I6L"/>
+                            <constraint firstItem="ceH-6M-L4v" firstAttribute="leading" secondItem="MiI-OF-X3S" secondAttribute="leading" id="j8r-qP-FQH"/>
+                            <constraint firstItem="ceH-6M-L4v" firstAttribute="top" secondItem="MiI-OF-X3S" secondAttribute="top" id="jEn-GW-KUu"/>
+                            <constraint firstItem="3Jk-ae-s94" firstAttribute="leading" secondItem="MiI-OF-X3S" secondAttribute="leading" constant="40" id="lVy-Sa-JFJ"/>
+                            <constraint firstItem="3Jk-ae-s94" firstAttribute="top" secondItem="MiI-OF-X3S" secondAttribute="top" constant="60" id="oEC-cF-QNn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MiI-OF-X3S"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ai2-Ja-qib" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4462" y="-1546"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="O9g-Xw-XyG">
+            <objects>
+                <viewController id="PNS-Lp-psp" customClass="LoginViewController" customModule="MagicTheGatheringDeckBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LDV-jr-es9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mtgElements" translatesAutoresizingMaskIntoConstraints="NO" id="CyZ-T6-DH9">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0EO-Ka-F15">
+                                <rect key="frame" x="40" y="124" width="295" height="41"/>
+                                <fontDescription key="fontDescription" name="Magic:theGathering" family="Magic:the Gathering" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="e4H-y6-teC" firstAttribute="trailing" secondItem="0EO-Ka-F15" secondAttribute="trailing" constant="40" id="GDD-tL-alw"/>
+                            <constraint firstItem="CyZ-T6-DH9" firstAttribute="leading" secondItem="e4H-y6-teC" secondAttribute="leading" id="MQi-VE-TQb"/>
+                            <constraint firstItem="CyZ-T6-DH9" firstAttribute="bottom" secondItem="e4H-y6-teC" secondAttribute="bottom" id="N4b-UY-1sg"/>
+                            <constraint firstItem="CyZ-T6-DH9" firstAttribute="trailing" secondItem="e4H-y6-teC" secondAttribute="trailing" id="Nyv-xr-HsN"/>
+                            <constraint firstItem="CyZ-T6-DH9" firstAttribute="top" secondItem="e4H-y6-teC" secondAttribute="top" id="OXz-ob-x12"/>
+                            <constraint firstItem="0EO-Ka-F15" firstAttribute="leading" secondItem="e4H-y6-teC" secondAttribute="leading" constant="40" id="ROt-ZO-Vbe"/>
+                            <constraint firstItem="0EO-Ka-F15" firstAttribute="top" secondItem="e4H-y6-teC" secondAttribute="top" constant="60" id="XLS-44-Eib"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="e4H-y6-teC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cld-bP-F6h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4462" y="-723"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="wFW-uy-Reb">
+            <objects>
+                <viewController id="IID-lQ-5Zi" customClass="MenuViewController" customModule="MagicTheGatheringDeckBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t5N-5N-nil">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mtgElements" translatesAutoresizingMaskIntoConstraints="NO" id="Fbc-pv-wro">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASK-46-wFE">
+                                <rect key="frame" x="40" y="124" width="295" height="41"/>
+                                <fontDescription key="fontDescription" name="Magic:theGathering" family="Magic:the Gathering" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7jn-8M-4vi">
+                                <rect key="frame" x="40" y="265" width="295" height="94"/>
+                                <fontDescription key="fontDescription" name="Magic:theGathering" family="Magic:the Gathering" pointSize="40"/>
+                                <state key="normal">
+                                    <string key="title">Create / modify 
+         Deck</string>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="createModifyDeck:" destination="IID-lQ-5Zi" eventType="touchUpInside" id="6np-X4-5BE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnW-ev-PQY">
+                                <rect key="frame" x="40" y="409" width="295" height="53"/>
+                                <fontDescription key="fontDescription" name="Magic:theGathering" family="Magic:the Gathering" pointSize="40"/>
+                                <state key="normal" title="Browse cards">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Bwh-bP-9Cx" kind="show" id="NeE-zT-Rd9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1C-KA-nxI">
+                                <rect key="frame" x="40" y="512" width="295" height="53"/>
+                                <fontDescription key="fontDescription" name="Magic:theGathering" family="Magic:the Gathering" pointSize="40"/>
+                                <state key="normal" title="Share Deck">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareDeck:" destination="IID-lQ-5Zi" eventType="touchUpInside" id="TS0-Lw-OAB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="h6f-3C-7t4" firstAttribute="trailing" secondItem="ASK-46-wFE" secondAttribute="trailing" constant="40" id="48Z-fM-wP3"/>
+                            <constraint firstItem="ASK-46-wFE" firstAttribute="top" secondItem="h6f-3C-7t4" secondAttribute="top" constant="60" id="8GN-JX-Zg5"/>
+                            <constraint firstItem="p1C-KA-nxI" firstAttribute="leading" secondItem="h6f-3C-7t4" secondAttribute="leading" constant="40" id="CQG-LH-wL3"/>
+                            <constraint firstItem="ASK-46-wFE" firstAttribute="leading" secondItem="h6f-3C-7t4" secondAttribute="leading" constant="40" id="HZX-nT-Qiv"/>
+                            <constraint firstItem="tnW-ev-PQY" firstAttribute="top" secondItem="7jn-8M-4vi" secondAttribute="bottom" constant="50" id="IwH-U3-jkf"/>
+                            <constraint firstItem="h6f-3C-7t4" firstAttribute="trailing" secondItem="p1C-KA-nxI" secondAttribute="trailing" constant="40" id="emQ-j2-KSO"/>
+                            <constraint firstItem="7jn-8M-4vi" firstAttribute="leading" secondItem="h6f-3C-7t4" secondAttribute="leading" constant="40" id="hjS-d8-RDC"/>
+                            <constraint firstItem="p1C-KA-nxI" firstAttribute="top" secondItem="tnW-ev-PQY" secondAttribute="bottom" constant="50" id="q5b-Ym-l4H"/>
+                            <constraint firstItem="7jn-8M-4vi" firstAttribute="top" secondItem="ASK-46-wFE" secondAttribute="bottom" constant="100" id="sy8-Ef-uCX"/>
+                            <constraint firstItem="h6f-3C-7t4" firstAttribute="trailing" secondItem="tnW-ev-PQY" secondAttribute="trailing" constant="40" id="tf6-Ap-Qes"/>
+                            <constraint firstItem="tnW-ev-PQY" firstAttribute="leading" secondItem="h6f-3C-7t4" secondAttribute="leading" constant="40" id="xzl-mM-W8t"/>
+                            <constraint firstItem="h6f-3C-7t4" firstAttribute="trailing" secondItem="7jn-8M-4vi" secondAttribute="trailing" constant="40" id="z4q-td-ikD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="h6f-3C-7t4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RNl-R5-nlz"/>
+                    <connections>
+                        <segue destination="e7U-56-mk3" kind="show" identifier="fromMenuToDeckViewSegue" id="d5Q-Ep-GVI"/>
+                        <segue destination="EaC-KF-FWc" kind="show" identifier="fromMenuToMapSegue" id="E3M-6d-qhv"/>
+                        <segue destination="RUm-WG-yVB" kind="show" identifier="fromMenuToLoginSegue" id="Q1K-WU-HJQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NEw-5a-p5F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5598" y="127"/>
+        </scene>
+        <!--Card Filter Table View Controller-->
+        <scene sceneID="vyn-J4-r6n">
+            <objects>
+                <tableViewController id="Bwh-bP-9Cx" customClass="CardFilterTableViewController" customModule="MagicTheGatheringDeckBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2rg-rd-5Xd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uMO-2n-LgV">
+                            <rect key="frame" x="0.0" y="132" width="375" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Trouver"/>
+                            <connections>
+                                <action selector="trouverButton:" destination="Bwh-bP-9Cx" eventType="touchUpInside" id="ILo-mK-vxW"/>
+                            </connections>
+                        </button>
+                        <sections>
+                            <tableViewSection id="FRV-hy-lQl">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="colorCell" id="ku6-KD-lZd">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ku6-KD-lZd" id="vQK-8R-csl">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Color ex : white" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3C5-bP-4qC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3C5-bP-4qC" firstAttribute="top" secondItem="vQK-8R-csl" secondAttribute="top" id="0La-mg-Q5c"/>
+                                                <constraint firstAttribute="trailing" secondItem="3C5-bP-4qC" secondAttribute="trailing" id="ELg-dU-hfr"/>
+                                                <constraint firstItem="3C5-bP-4qC" firstAttribute="leading" secondItem="vQK-8R-csl" secondAttribute="leading" id="VtX-jS-uEG"/>
+                                                <constraint firstAttribute="bottom" secondItem="3C5-bP-4qC" secondAttribute="bottom" id="ZJl-Qi-n29"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="valueCell" id="PCw-2Z-ASj">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PCw-2Z-ASj" id="kld-7C-aTk">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card value ex: 2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H3e-QV-hNR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="H3e-QV-hNR" secondAttribute="trailing" id="Evr-tf-IYp"/>
+                                                <constraint firstAttribute="bottom" secondItem="H3e-QV-hNR" secondAttribute="bottom" id="RFr-dm-Gxq"/>
+                                                <constraint firstItem="H3e-QV-hNR" firstAttribute="top" secondItem="kld-7C-aTk" secondAttribute="top" id="RKA-lc-0je"/>
+                                                <constraint firstItem="H3e-QV-hNR" firstAttribute="leading" secondItem="kld-7C-aTk" secondAttribute="leading" id="WdM-3y-mdi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="setCell" id="c5I-A9-xUC">
+                                        <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c5I-A9-xUC" id="WNu-Pn-mrA">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card set ex: AER" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A7V-yd-0uS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="A7V-yd-0uS" secondAttribute="bottom" id="40S-Ap-75q"/>
+                                                <constraint firstItem="A7V-yd-0uS" firstAttribute="top" secondItem="WNu-Pn-mrA" secondAttribute="top" id="LXs-ZU-wqt"/>
+                                                <constraint firstAttribute="trailing" secondItem="A7V-yd-0uS" secondAttribute="trailing" id="QY6-tT-H53"/>
+                                                <constraint firstItem="A7V-yd-0uS" firstAttribute="leading" secondItem="WNu-Pn-mrA" secondAttribute="leading" id="Xzt-Ax-bmy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Bwh-bP-9Cx" id="gOf-oQ-q7h"/>
+                            <outlet property="delegate" destination="Bwh-bP-9Cx" id="ywM-3s-hfN"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="cardColor" destination="3C5-bP-4qC" id="p54-kd-779"/>
+                        <outlet property="cardSet" destination="A7V-yd-0uS" id="Di5-xX-oc5"/>
+                        <outlet property="cardValue" destination="H3e-QV-hNR" id="p38-ht-Oxj"/>
+                        <segue destination="2Ft-3Q-Cuo" kind="show" identifier="fromCardFilterToCardList" id="vVI-JV-WlU"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jfA-oT-A64" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6690" y="126"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="bkC-m9-Te7">
+            <objects>
+                <viewController id="EaC-KF-FWc" customClass="MapViewController" customModule="MagicTheGatheringDeckBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a6x-bX-TTI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="02g-dH-fVy">
+                                <rect key="frame" x="0.0" y="64" width="375" height="301"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="EaC-KF-FWc" id="dgd-r8-gtE"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="yby-1l-bIe"/>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="02g-dH-fVy" id="Hi6-9Y-hol"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zFT-5a-PjC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6688.8000000000002" y="987.25637181409309"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="nk0-FE-um6">
+            <objects>
+                <tableViewController id="e7U-56-mk3" customClass="DeckListTableViewController" customModule="MagicTheGatheringDeckBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sqR-sJ-rj0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="deckCell" rowHeight="187" id="24i-93-Vmp">
+                                <rect key="frame" x="0.0" y="28" width="375" height="187"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="24i-93-Vmp" id="9dl-Hw-ZNt">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="186.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qYb-Y6-Qaj">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="186.5"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="Och-z7-nCJ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="186.5"/>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="70x-ur-iBG">
+                                                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="186.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPQ-HX-JJc">
+                                                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="93.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Definition" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ft-ua-t3z">
+                                                            <rect key="frame" x="0.0" y="93.5" width="187.5" height="93"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="qYb-Y6-Qaj" firstAttribute="leading" secondItem="9dl-Hw-ZNt" secondAttribute="leading" id="6U9-om-nzX"/>
+                                        <constraint firstAttribute="trailing" secondItem="qYb-Y6-Qaj" secondAttribute="trailing" id="ghF-Mk-V3L"/>
+                                        <constraint firstItem="qYb-Y6-Qaj" firstAttribute="top" secondItem="9dl-Hw-ZNt" secondAttribute="top" id="nnu-gx-Vfp"/>
+                                        <constraint firstAttribute="bottom" secondItem="qYb-Y6-Qaj" secondAttribute="bottom" id="phK-QW-VZm"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="e7U-56-mk3" id="l7v-nf-uLt"/>
+                            <outlet property="delegate" destination="e7U-56-mk3" id="8f1-Ip-YCr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="cES-rp-40k">
+                        <barButtonItem key="rightBarButtonItem" tag="1" title="Add Deck" id="2be-rA-NYu">
+                            <connections>
+                                <action selector="addDeck:" destination="e7U-56-mk3" id="vlW-Pq-YYx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="Gzj-Ps-VgA" kind="show" identifier="fromDeckListToDeckDetail" id="hfi-8f-8go"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HWK-U2-26g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6688.8000000000002" y="-722.78860569715152"/>
+        </scene>
+        <!--Deck Detail Collection View Controller-->
+        <scene sceneID="Ch4-uH-ath">
+            <objects>
+                <collectionViewController id="Gzj-Ps-VgA" customClass="DeckDetailCollectionViewController" customModule="MagicTheGatheringDeckBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="QI9-sy-G0a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QGe-04-hA6">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ech-v0-uqt">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Gzj-Ps-VgA" id="naA-xG-gl9"/>
+                            <outlet property="delegate" destination="Gzj-Ps-VgA" id="V4S-VD-rIW"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <segue destination="is6-jM-i1F" kind="show" identifier="fromDeckDetailToCardDetail" id="n0T-CX-xlV"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JnA-Ek-WZL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7822" y="-721"/>
+        </scene>
+        <!--Card List Collection View Controller-->
+        <scene sceneID="lBV-ML-MBA">
+            <objects>
+                <collectionViewController id="2Ft-3Q-Cuo" customClass="CardListCollectionViewController" customModule="MagicTheGatheringDeckBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="sZF-jT-rcI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="631-KA-4Rd">
+                            <size key="itemSize" width="165" height="265"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardDetail" id="h0h-zE-t4N" customClass="CardCollectionViewCell" customModule="MagicTheGatheringDeckBuilder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="165" height="265"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="165" height="265"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mCy-VK-DbX">
+                                            <rect key="frame" x="0.0" y="0.0" width="165" height="265"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="mCy-VK-DbX" firstAttribute="top" secondItem="h0h-zE-t4N" secondAttribute="top" id="Rxb-Hq-AoL"/>
+                                    <constraint firstAttribute="trailing" secondItem="mCy-VK-DbX" secondAttribute="trailing" id="hxV-Ha-hQu"/>
+                                    <constraint firstAttribute="bottom" secondItem="mCy-VK-DbX" secondAttribute="bottom" id="yNZ-Sr-Mti"/>
+                                    <constraint firstItem="mCy-VK-DbX" firstAttribute="leading" secondItem="h0h-zE-t4N" secondAttribute="leading" id="zPT-oI-fe9"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="cardImage" destination="mCy-VK-DbX" id="cDe-F6-FkY"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="2Ft-3Q-Cuo" id="0rT-Af-KGT"/>
+                            <outlet property="delegate" destination="2Ft-3Q-Cuo" id="49g-Jf-hv1"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <segue destination="is6-jM-i1F" kind="show" identifier="fromCardListToCardDetail" id="H6h-O7-GwC"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hy9-C6-MQS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7821.6000000000004" y="124.58770614692655"/>
+        </scene>
+        <!--Card Detail View Controller-->
+        <scene sceneID="8h0-bi-of8">
+            <objects>
+                <viewController id="is6-jM-i1F" customClass="CardDetailViewController" customModule="MagicTheGatheringDeckBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tuw-Uh-WyY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="pnn-pF-CMe"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HFT-tv-CDS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8900" y="126"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rzC-dq-85v">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RUm-WG-yVB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dwZ-1X-p42">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Emy-H6-8zT" kind="relationship" relationship="rootViewController" id="em7-ox-O86"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m3J-3G-dkw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5598" y="-723"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ytn-bT-bDo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dCj-Vy-6ht" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c3K-59-ShA">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IID-lQ-5Zi" kind="relationship" relationship="rootViewController" id="AuS-gT-OR0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R6o-5s-0g9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4462" y="125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mtgElements" width="540" height="960"/>
+        <image name="mtgLogo" width="375" height="667"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="H6h-O7-GwC"/>
+    </inferredMetricsTieBreakers>
+</document>
