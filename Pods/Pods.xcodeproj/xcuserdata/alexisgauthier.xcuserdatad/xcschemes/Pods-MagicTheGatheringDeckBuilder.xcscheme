@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "442746AAC5CE1602B259F05D705370C9"
+               BlueprintIdentifier = "D851545206D00AB7A5FF3182DBB3ADEC"
                BuildableName = "Pods_MagicTheGatheringDeckBuilder.framework"
                BlueprintName = "Pods-MagicTheGatheringDeckBuilder"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "442746AAC5CE1602B259F05D705370C9"
+            BlueprintIdentifier = "D851545206D00AB7A5FF3182DBB3ADEC"
             BuildableName = "Pods_MagicTheGatheringDeckBuilder.framework"
             BlueprintName = "Pods-MagicTheGatheringDeckBuilder"
             ReferencedContainer = "container:Pods.xcodeproj">

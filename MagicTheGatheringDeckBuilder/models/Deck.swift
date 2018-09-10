@@ -19,6 +19,4 @@ struct Deck {
     public var description: String?
     public var image: UIImage?
     public var cards: [Card]?
-
-    
 }

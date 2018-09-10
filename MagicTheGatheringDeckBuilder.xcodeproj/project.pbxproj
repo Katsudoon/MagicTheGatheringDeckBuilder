@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B5ECFA61D030AA3CE65963F3 /* Pods_MagicTheGatheringDeckBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384E9BE0717D6FC3006E0502 /* Pods_MagicTheGatheringDeckBuilder.framework */; };
 		D322DB25214003D2005FDA51 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = D322DB24214003D2005FDA51 /* Deck.swift */; };
+		D33803D72146701000CE8E99 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33803D62146701000CE8E99 /* Constants.swift */; };
 		D3560135213FCE1A00AAC14F /* MTGSDKSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3590DB92136EB180081576A /* MTGSDKSwift.framework */; };
 		D3560136213FCE1A00AAC14F /* MTGSDKSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3590DB92136EB180081576A /* MTGSDKSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D36732F32137D5FA0006520B /* magicthegathering in Resources */ = {isa = PBXBuildFile; fileRef = D36732F22137D5FA0006520B /* magicthegathering */; };
@@ -76,6 +77,7 @@
 		3EB0553EBD5BFB4AA82405D7 /* Pods-MagicTheGatheringDeckBuilder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicTheGatheringDeckBuilder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MagicTheGatheringDeckBuilder/Pods-MagicTheGatheringDeckBuilder.debug.xcconfig"; sourceTree = "<group>"; };
 		A6AD639AEAC188EACEC084D2 /* Pods-MagicTheGatheringDeckBuilder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicTheGatheringDeckBuilder.release.xcconfig"; path = "Pods/Target Support Files/Pods-MagicTheGatheringDeckBuilder/Pods-MagicTheGatheringDeckBuilder.release.xcconfig"; sourceTree = "<group>"; };
 		D322DB24214003D2005FDA51 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		D33803D62146701000CE8E99 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D3590DB32136EB180081576A /* MTGSDKSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MTGSDKSwift.xcodeproj; path = "mtg-sdk-swift-master/MTGSDKSwift.xcodeproj"; sourceTree = "<group>"; };
 		D36732F22137D5FA0006520B /* magicthegathering */ = {isa = PBXFileReference; lastKnownFileType = folder; path = magicthegathering; sourceTree = "<group>"; };
 		D36732F421381A410006520B /* MAGIC.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = MAGIC.TTF; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				D3673300213823610006520B /* extension.swift */,
+				D33803D62146701000CE8E99 /* Constants.swift */,
 			);
 			path = ToolBox;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				D38B628C2136E018005783B2 /* Frameworks */,
 				D38B628D2136E018005783B2 /* Resources */,
 				D3560139213FCE1A00AAC14F /* Embed Frameworks */,
+				9BF68034D5432248A8608FE1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -350,6 +354,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9BF68034D5432248A8608FE1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MagicTheGatheringDeckBuilder/Pods-MagicTheGatheringDeckBuilder-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MagicTheGatheringDeckBuilder/Pods-MagicTheGatheringDeckBuilder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -364,6 +388,7 @@
 				D3C60516213EB7E400EFB9CE /* CardCollectionViewCell.swift in Sources */,
 				D3C6050F213E909100EFB9CE /* CardFilterTableViewController.swift in Sources */,
 				D3C6050D213E907800EFB9CE /* DeckListTableViewController.swift in Sources */,
+				D33803D72146701000CE8E99 /* Constants.swift in Sources */,
 				D3C6050B213E902A00EFB9CE /* MapViewController.swift in Sources */,
 				D3C604F8213E83CE00EFB9CE /* MenuViewController.swift in Sources */,
 				D3C60511213E90A500EFB9CE /* DeckDetailCollectionViewController.swift in Sources */,

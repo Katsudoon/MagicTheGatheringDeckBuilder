@@ -6,5 +6,6 @@ target 'MagicTheGatheringDeckBuilder' do
   use_frameworks!
 
   # Pods for MagicTheGatheringDeckBuilder
+  pod 'RealmSwift'
 
 end

@@ -8,8 +8,6 @@
 
 import Foundation
 
-//TODO - Implement extra card properties
-
 public struct Card: Equatable {
     
     public init() {}
@@ -45,18 +43,4 @@ public struct Card: Equatable {
     public static func ==(lhs: Card, rhs: Card) -> Bool {
         return lhs.id == rhs.id 
     }
-    
-    /*
-    
-    public var loyalty: Int?
-    public var watermark: Any?
-    public var reserved: Any?
-    public var legalities: Any?
-    public var gameFormat: Any?
-    public var variations: Any?
-    public var releaseDate: Any?
- 
- */
-    
-
 }
