@@ -8,10 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		B5ECFA61D030AA3CE65963F3 /* Pods_MagicTheGatheringDeckBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384E9BE0717D6FC3006E0502 /* Pods_MagicTheGatheringDeckBuilder.framework */; };
+		D32140E621469B1B0006E3E6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32140E521469B1B0006E3E6 /* User.swift */; };
 		D322DB25214003D2005FDA51 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = D322DB24214003D2005FDA51 /* Deck.swift */; };
 		D33803D72146701000CE8E99 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33803D62146701000CE8E99 /* Constants.swift */; };
 		D3560135213FCE1A00AAC14F /* MTGSDKSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3590DB92136EB180081576A /* MTGSDKSwift.framework */; };
 		D3560136213FCE1A00AAC14F /* MTGSDKSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3590DB92136EB180081576A /* MTGSDKSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D362A2472147B1B00070EE0D /* CardDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362A2462147B1B00070EE0D /* CardDB.swift */; };
+		D362A24C2147BE370070EE0D /* DeckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362A24B2147BE370070EE0D /* DeckTableViewCell.swift */; };
+		D362A24E2147C9B60070EE0D /* CustomDictionnary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362A24D2147C9B60070EE0D /* CustomDictionnary.swift */; };
+		D362A25021480B190070EE0D /* DeckDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362A24F21480B190070EE0D /* DeckDetailViewController.swift */; };
 		D36732F32137D5FA0006520B /* magicthegathering in Resources */ = {isa = PBXBuildFile; fileRef = D36732F22137D5FA0006520B /* magicthegathering */; };
 		D36732F521381A410006520B /* MAGIC.TTF in Resources */ = {isa = PBXBuildFile; fileRef = D36732F421381A410006520B /* MAGIC.TTF */; };
 		D36732F721381E700006520B /* LoginMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36732F621381E700006520B /* LoginMenuViewController.swift */; };
@@ -29,7 +34,6 @@
 		D3C6050B213E902A00EFB9CE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6050A213E902A00EFB9CE /* MapViewController.swift */; };
 		D3C6050D213E907800EFB9CE /* DeckListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6050C213E907800EFB9CE /* DeckListTableViewController.swift */; };
 		D3C6050F213E909100EFB9CE /* CardFilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6050E213E909100EFB9CE /* CardFilterTableViewController.swift */; };
-		D3C60511213E90A500EFB9CE /* DeckDetailCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C60510213E90A500EFB9CE /* DeckDetailCollectionViewController.swift */; };
 		D3C60513213E90AF00EFB9CE /* CardListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C60512213E90AF00EFB9CE /* CardListCollectionViewController.swift */; };
 		D3C60516213EB7E400EFB9CE /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C60515213EB7E400EFB9CE /* CardCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -76,9 +80,14 @@
 		384E9BE0717D6FC3006E0502 /* Pods_MagicTheGatheringDeckBuilder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagicTheGatheringDeckBuilder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EB0553EBD5BFB4AA82405D7 /* Pods-MagicTheGatheringDeckBuilder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicTheGatheringDeckBuilder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MagicTheGatheringDeckBuilder/Pods-MagicTheGatheringDeckBuilder.debug.xcconfig"; sourceTree = "<group>"; };
 		A6AD639AEAC188EACEC084D2 /* Pods-MagicTheGatheringDeckBuilder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicTheGatheringDeckBuilder.release.xcconfig"; path = "Pods/Target Support Files/Pods-MagicTheGatheringDeckBuilder/Pods-MagicTheGatheringDeckBuilder.release.xcconfig"; sourceTree = "<group>"; };
+		D32140E521469B1B0006E3E6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D322DB24214003D2005FDA51 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		D33803D62146701000CE8E99 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D3590DB32136EB180081576A /* MTGSDKSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MTGSDKSwift.xcodeproj; path = "mtg-sdk-swift-master/MTGSDKSwift.xcodeproj"; sourceTree = "<group>"; };
+		D362A2462147B1B00070EE0D /* CardDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDB.swift; sourceTree = "<group>"; };
+		D362A24B2147BE370070EE0D /* DeckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckTableViewCell.swift; sourceTree = "<group>"; };
+		D362A24D2147C9B60070EE0D /* CustomDictionnary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDictionnary.swift; sourceTree = "<group>"; };
+		D362A24F21480B190070EE0D /* DeckDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckDetailViewController.swift; sourceTree = "<group>"; };
 		D36732F22137D5FA0006520B /* magicthegathering */ = {isa = PBXFileReference; lastKnownFileType = folder; path = magicthegathering; sourceTree = "<group>"; };
 		D36732F421381A410006520B /* MAGIC.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = MAGIC.TTF; sourceTree = "<group>"; };
 		D36732F621381E700006520B /* LoginMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMenuViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +107,6 @@
 		D3C6050A213E902A00EFB9CE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D3C6050C213E907800EFB9CE /* DeckListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListTableViewController.swift; sourceTree = "<group>"; };
 		D3C6050E213E909100EFB9CE /* CardFilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFilterTableViewController.swift; sourceTree = "<group>"; };
-		D3C60510213E90A500EFB9CE /* DeckDetailCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckDetailCollectionViewController.swift; sourceTree = "<group>"; };
 		D3C60512213E90AF00EFB9CE /* CardListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListCollectionViewController.swift; sourceTree = "<group>"; };
 		D3C60515213EB7E400EFB9CE /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,10 +168,10 @@
 				D3C604FD213E842B00EFB9CE /* SignUpViewController.swift */,
 				D3C604F7213E83CE00EFB9CE /* MenuViewController.swift */,
 				D3C6050C213E907800EFB9CE /* DeckListTableViewController.swift */,
-				D3C60510213E90A500EFB9CE /* DeckDetailCollectionViewController.swift */,
-				D3C60508213E902100EFB9CE /* CardDetailViewController.swift */,
+				D362A24F21480B190070EE0D /* DeckDetailViewController.swift */,
 				D3C6050E213E909100EFB9CE /* CardFilterTableViewController.swift */,
 				D3C60512213E90AF00EFB9CE /* CardListCollectionViewController.swift */,
+				D3C60508213E902100EFB9CE /* CardDetailViewController.swift */,
 				D3C6050A213E902A00EFB9CE /* MapViewController.swift */,
 			);
 			path = Controller;
@@ -234,7 +242,11 @@
 			isa = PBXGroup;
 			children = (
 				D3C60515213EB7E400EFB9CE /* CardCollectionViewCell.swift */,
+				D362A24B2147BE370070EE0D /* DeckTableViewCell.swift */,
 				D322DB24214003D2005FDA51 /* Deck.swift */,
+				D32140E521469B1B0006E3E6 /* User.swift */,
+				D362A2462147B1B00070EE0D /* CardDB.swift */,
+				D362A24D2147C9B60070EE0D /* CustomDictionnary.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -388,15 +400,19 @@
 				D3C60516213EB7E400EFB9CE /* CardCollectionViewCell.swift in Sources */,
 				D3C6050F213E909100EFB9CE /* CardFilterTableViewController.swift in Sources */,
 				D3C6050D213E907800EFB9CE /* DeckListTableViewController.swift in Sources */,
+				D32140E621469B1B0006E3E6 /* User.swift in Sources */,
+				D362A25021480B190070EE0D /* DeckDetailViewController.swift in Sources */,
 				D33803D72146701000CE8E99 /* Constants.swift in Sources */,
+				D362A24E2147C9B60070EE0D /* CustomDictionnary.swift in Sources */,
 				D3C6050B213E902A00EFB9CE /* MapViewController.swift in Sources */,
 				D3C604F8213E83CE00EFB9CE /* MenuViewController.swift in Sources */,
-				D3C60511213E90A500EFB9CE /* DeckDetailCollectionViewController.swift in Sources */,
 				D38B62952136E018005783B2 /* LaunchScreenViewController.swift in Sources */,
+				D362A24C2147BE370070EE0D /* DeckTableViewCell.swift in Sources */,
 				D3C60513213E90AF00EFB9CE /* CardListCollectionViewController.swift in Sources */,
 				D322DB25214003D2005FDA51 /* Deck.swift in Sources */,
 				D38B62932136E018005783B2 /* AppDelegate.swift in Sources */,
 				D3673301213823610006520B /* extension.swift in Sources */,
+				D362A2472147B1B00070EE0D /* CardDB.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

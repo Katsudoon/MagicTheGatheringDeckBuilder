@@ -8,15 +8,14 @@
 
 import Foundation
 import UIKit
-import MTGSDKSwift
+import RealmSwift
 
 
-struct Deck {
+class Deck: Object  {
     
-    public init() {}
-    
-    public var name: String?
-    public var description: String?
-    public var image: UIImage?
-    public var cards: [Card]?
+    @objc dynamic var name: String = ""
+    @objc dynamic var descriptions: String = ""
+    var cards = RealmSwift.List<CardDB>()
 }
+
+

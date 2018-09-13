@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dCj-Vy-6ht">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -491,7 +491,7 @@ Deck Builder</string>
             </objects>
             <point key="canvasLocation" x="6688.8000000000002" y="987.25637181409309"/>
         </scene>
-        <!--Title-->
+        <!--Decks-->
         <scene sceneID="nk0-FE-um6">
             <objects>
                 <tableViewController id="e7U-56-mk3" customClass="DeckListTableViewController" customModule="MagicTheGatheringDeckBuilder" customModuleProvider="target" sceneMemberID="viewController">
@@ -500,44 +500,51 @@ Deck Builder</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="deckCell" rowHeight="187" id="24i-93-Vmp">
-                                <rect key="frame" x="0.0" y="28" width="375" height="187"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="deckCell" textLabel="ma7-i5-wiU" detailTextLabel="VLa-0k-cUZ" rowHeight="59" style="IBUITableViewCellStyleSubtitle" id="24i-93-Vmp" customClass="DeckTableViewCell" customModule="MagicTheGatheringDeckBuilder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="59"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="24i-93-Vmp" id="9dl-Hw-ZNt">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="186.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="58.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qYb-Y6-Qaj">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="186.5"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="Och-z7-nCJ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="186.5"/>
-                                                </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="70x-ur-iBG">
-                                                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="186.5"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPQ-HX-JJc">
-                                                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="93.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Definition" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ft-ua-t3z">
-                                                            <rect key="frame" x="0.0" y="93.5" width="187.5" height="93"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                            </subviews>
-                                        </stackView>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ma7-i5-wiU">
+                                            <rect key="frame" x="16" y="9" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VLa-0k-cUZ">
+                                            <rect key="frame" x="16" y="32.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="deckDescriptionCell" destination="VLa-0k-cUZ" id="76K-TY-Try"/>
+                                    <outlet property="deckTitleCell" destination="ma7-i5-wiU" id="IQS-2x-7Nb"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="deckCellAdd" rowHeight="59" id="Dib-AR-d5y" customClass="DeckTableViewCell" customModule="MagicTheGatheringDeckBuilder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="87" width="375" height="59"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dib-AR-d5y" id="Pba-ZL-8p1">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="58.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Deck" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytK-JH-roJ">
+                                            <rect key="frame" x="150" y="19" width="75" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="qYb-Y6-Qaj" firstAttribute="leading" secondItem="9dl-Hw-ZNt" secondAttribute="leading" id="6U9-om-nzX"/>
-                                        <constraint firstAttribute="trailing" secondItem="qYb-Y6-Qaj" secondAttribute="trailing" id="ghF-Mk-V3L"/>
-                                        <constraint firstItem="qYb-Y6-Qaj" firstAttribute="top" secondItem="9dl-Hw-ZNt" secondAttribute="top" id="nnu-gx-Vfp"/>
-                                        <constraint firstAttribute="bottom" secondItem="qYb-Y6-Qaj" secondAttribute="bottom" id="phK-QW-VZm"/>
+                                        <constraint firstItem="ytK-JH-roJ" firstAttribute="centerY" secondItem="Pba-ZL-8p1" secondAttribute="centerY" id="Ul9-sO-12p"/>
+                                        <constraint firstItem="ytK-JH-roJ" firstAttribute="centerX" secondItem="Pba-ZL-8p1" secondAttribute="centerX" id="iN3-XK-pyB"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -547,10 +554,10 @@ Deck Builder</string>
                             <outlet property="delegate" destination="e7U-56-mk3" id="8f1-Ip-YCr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="cES-rp-40k">
-                        <barButtonItem key="rightBarButtonItem" tag="1" title="Add Deck" id="2be-rA-NYu">
+                    <navigationItem key="navigationItem" title="Decks" id="cES-rp-40k">
+                        <barButtonItem key="rightBarButtonItem" tag="1" title="Delete" id="2be-rA-NYu">
                             <connections>
-                                <action selector="addDeck:" destination="e7U-56-mk3" id="vlW-Pq-YYx"/>
+                                <action selector="editButton:" destination="e7U-56-mk3" id="ZQk-wC-Ec3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -562,10 +569,10 @@ Deck Builder</string>
             </objects>
             <point key="canvasLocation" x="6688.8000000000002" y="-722.78860569715152"/>
         </scene>
-        <!--Deck Detail Collection View Controller-->
+        <!--Title-->
         <scene sceneID="B7i-lF-7np">
             <objects>
-                <viewController id="4Ug-6O-nmP" customClass="DeckDetailCollectionViewController" customModule="MagicTheGatheringDeckBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4Ug-6O-nmP" customClass="DeckDetailViewController" customModule="MagicTheGatheringDeckBuilder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Lx-k6-7QO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -594,7 +601,6 @@ Deck Builder</string>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EIv-8r-B4J" secondAttribute="height" multiplier="240:91" id="DBt-vK-Tm5"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -611,7 +617,7 @@ Deck Builder</string>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardDetail" id="uC4-JL-rOv" customClass="CardCollectionViewCell" customModule="MagicTheGatheringDeckBuilder" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="deckDetail" id="uC4-JL-rOv" customClass="CardCollectionViewCell" customModule="MagicTheGatheringDeckBuilder" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="146" height="227"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -633,10 +639,30 @@ Deck Builder</string>
                                                     <outlet property="cardImage" destination="iez-Fk-cek" id="XWt-EA-xkG"/>
                                                 </connections>
                                             </collectionViewCell>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="deckDetailAdd" id="vLN-Fx-fAZ" customClass="CardCollectionViewCell" customModule="MagicTheGatheringDeckBuilder" customModuleProvider="target">
+                                                <rect key="frame" x="229" y="0.0" width="146" height="227"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="146" height="227"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUe-fu-Uy9">
+                                                            <rect key="frame" x="37" y="103" width="72" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </view>
+                                                <constraints>
+                                                    <constraint firstItem="OUe-fu-Uy9" firstAttribute="centerX" secondItem="vLN-Fx-fAZ" secondAttribute="centerX" id="6LB-ic-57x"/>
+                                                    <constraint firstItem="OUe-fu-Uy9" firstAttribute="centerY" secondItem="vLN-Fx-fAZ" secondAttribute="centerY" id="qPE-e3-aEX"/>
+                                                </constraints>
+                                            </collectionViewCell>
                                         </cells>
                                         <connections>
-                                            <outlet property="dataSource" destination="4Ug-6O-nmP" id="THW-uh-kV0"/>
-                                            <outlet property="delegate" destination="4Ug-6O-nmP" id="4n7-6c-xh3"/>
+                                            <outlet property="dataSource" destination="4Ug-6O-nmP" id="H7N-Ug-Qet"/>
+                                            <outlet property="delegate" destination="4Ug-6O-nmP" id="Vfw-V4-sm8"/>
                                         </connections>
                                     </collectionView>
                                 </subviews>
@@ -669,14 +695,26 @@ Deck Builder</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yJO-Pp-7aN"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="oVZ-gX-QZI">
+                        <barButtonItem key="rightBarButtonItem" title="Validate" id="JUR-39-Y7U">
+                            <connections>
+                                <action selector="validateButton:" destination="4Ug-6O-nmP" id="1sK-Gc-7Zc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="descriptionDeckEditable" destination="EIv-8r-B4J" id="kyt-hY-GI4"/>
-                        <outlet property="titleDeckEditable" destination="EVo-99-bzv" id="a2T-ZL-ZS1"/>
+                        <outlet property="collection" destination="UrR-30-j14" id="lBf-ts-QSD"/>
+                        <outlet property="descriptionDeckEditable" destination="EIv-8r-B4J" id="Dxk-8r-d7d"/>
+                        <outlet property="titleDeckEditable" destination="EVo-99-bzv" id="xpT-wf-OOA"/>
+                        <segue destination="HL9-fU-dXb" kind="unwind" identifier="unwindSegueToDeckList" unwindAction="unwindToDeckList:" id="szc-wK-dak"/>
+                        <segue destination="Bwh-bP-9Cx" kind="show" identifier="fromDeckDetailToCards" id="nD7-Cc-OXb"/>
+                        <segue destination="is6-jM-i1F" kind="show" identifier="fromDeckDetailToCardsDetails" id="YFh-OK-m4l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Hg-5B-yV4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="HL9-fU-dXb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="7733.6000000000004" y="-722.78860569715152"/>
+            <point key="canvasLocation" x="7822" y="-724"/>
         </scene>
         <!--Card List Collection View Controller-->
         <scene sceneID="lBV-ML-MBA">
@@ -729,20 +767,57 @@ Deck Builder</string>
             </objects>
             <point key="canvasLocation" x="7821.6000000000004" y="124.58770614692655"/>
         </scene>
-        <!--Card Detail View Controller-->
+        <!--Title-->
         <scene sceneID="8h0-bi-of8">
             <objects>
                 <viewController id="is6-jM-i1F" customClass="CardDetailViewController" customModule="MagicTheGatheringDeckBuilder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tuw-Uh-WyY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6lQ-Wo-y2a">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esz-wn-ez7">
+                                <rect key="frame" x="137" y="283.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Xaz-fk-4wQ"/>
+                                    <constraint firstAttribute="height" constant="100" id="y5D-Wg-o3K"/>
+                                </constraints>
+                                <state key="normal" image="add"/>
+                                <connections>
+                                    <segue destination="RtL-CL-Z9p" kind="unwind" identifier="unwindToDeckDetailAdd" unwindAction="unwindToDeckDetailAdd:" id="OYs-Jw-eiU"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6lQ-Wo-y2a" firstAttribute="top" secondItem="pnn-pF-CMe" secondAttribute="top" id="Jmc-Xz-dlr"/>
+                            <constraint firstItem="6lQ-Wo-y2a" firstAttribute="trailing" secondItem="pnn-pF-CMe" secondAttribute="trailing" id="PLk-l0-9I6"/>
+                            <constraint firstItem="esz-wn-ez7" firstAttribute="centerX" secondItem="tuw-Uh-WyY" secondAttribute="centerX" id="UOI-2w-KXb"/>
+                            <constraint firstItem="esz-wn-ez7" firstAttribute="centerY" secondItem="tuw-Uh-WyY" secondAttribute="centerY" id="Zzr-Cn-3Is"/>
+                            <constraint firstItem="6lQ-Wo-y2a" firstAttribute="bottom" secondItem="pnn-pF-CMe" secondAttribute="bottom" id="gpk-Aw-z1u"/>
+                            <constraint firstItem="6lQ-Wo-y2a" firstAttribute="leading" secondItem="pnn-pF-CMe" secondAttribute="leading" id="zeE-vT-LNF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pnn-pF-CMe"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="ow3-L1-Rix">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="bNj-2x-WG3">
+                            <connections>
+                                <segue destination="RtL-CL-Z9p" kind="unwind" identifier="unwindToDeckDetailDelete" unwindAction="unwindToDeckDetailDelete:" id="qkU-g0-UHj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addButonImage" destination="esz-wn-ez7" id="bIB-Sg-qeD"/>
+                        <outlet property="cardImageDetail" destination="6lQ-Wo-y2a" id="QFH-S3-uDc"/>
+                        <outlet property="deleteButonImage" destination="bNj-2x-WG3" id="Vug-m6-Rgv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HFT-tv-CDS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="RtL-CL-Z9p" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="8900" y="126"/>
+            <point key="canvasLocation" x="8900" y="125.4872563718141"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rzC-dq-85v">
@@ -782,7 +857,12 @@ Deck Builder</string>
         </scene>
     </scenes>
     <resources>
+        <image name="add" width="800" height="800"/>
         <image name="mtgElements" width="540" height="960"/>
         <image name="mtgLogo" width="375" height="667"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="YFh-OK-m4l"/>
+        <segue reference="nD7-Cc-OXb"/>
+    </inferredMetricsTieBreakers>
 </document>

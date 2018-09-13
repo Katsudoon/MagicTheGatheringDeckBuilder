@@ -15,7 +15,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var mailTextField: UITextField!
     
-    
+    let realm = try! Realm()
     
 
     override func viewDidLoad() {
@@ -28,24 +28,26 @@ class SignUpViewController: UIViewController {
     
     @IBAction func validateButton(_ sender: Any) {
         
-        var valide = true
         let nick = nicknameTextField.text
         let pass = passwordTextField.text
         let mail = mailTextField.text
         
         guard nick != "" else {
-            return valide = false
+            return
         }
         guard pass != "" else {
-            return valide = false
+            return
         }
         guard mail != "" else {
-            return valide = false
+            return
         }
+
+        let user = User()
+        user.nickname = nick!
+        user.password = pass!
+        user.mail = mail!
+
         
-        if valide == true {
-            
-        }
         
     }
     

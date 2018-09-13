@@ -13,6 +13,8 @@ class CardFilterTableViewController: UITableViewController {
     @IBOutlet weak var cardColor: UITextField!
     @IBOutlet weak var cardValue: UITextField!
     @IBOutlet weak var cardSet: UITextField!
+    
+    var addDeckDetail = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,7 @@ class CardFilterTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as! CardListCollectionViewController
+        controller.addDeckDetail = addDeckDetail
 
         if let color = cardColor.text {
             controller.color.value = color.lowercased()
