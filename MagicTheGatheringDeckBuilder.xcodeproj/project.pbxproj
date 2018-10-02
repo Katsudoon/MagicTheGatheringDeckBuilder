@@ -36,6 +36,7 @@
 		D3C6050F213E909100EFB9CE /* CardFilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6050E213E909100EFB9CE /* CardFilterTableViewController.swift */; };
 		D3C60513213E90AF00EFB9CE /* CardListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C60512213E90AF00EFB9CE /* CardListCollectionViewController.swift */; };
 		D3C60516213EB7E400EFB9CE /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C60515213EB7E400EFB9CE /* CardCollectionViewCell.swift */; };
+		D3CD627B2163764600BE24F4 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CD627A2163764600BE24F4 /* PopoverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		D3C6050E213E909100EFB9CE /* CardFilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFilterTableViewController.swift; sourceTree = "<group>"; };
 		D3C60512213E90AF00EFB9CE /* CardListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListCollectionViewController.swift; sourceTree = "<group>"; };
 		D3C60515213EB7E400EFB9CE /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		D3CD627A2163764600BE24F4 /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				D3C60512213E90AF00EFB9CE /* CardListCollectionViewController.swift */,
 				D3C60508213E902100EFB9CE /* CardDetailViewController.swift */,
 				D3C6050A213E902A00EFB9CE /* MapViewController.swift */,
+				D3CD627A2163764600BE24F4 /* PopoverViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				D38B62952136E018005783B2 /* LaunchScreenViewController.swift in Sources */,
 				D362A24C2147BE370070EE0D /* DeckTableViewCell.swift in Sources */,
 				D3C60513213E90AF00EFB9CE /* CardListCollectionViewController.swift in Sources */,
+				D3CD627B2163764600BE24F4 /* PopoverViewController.swift in Sources */,
 				D322DB25214003D2005FDA51 /* Deck.swift in Sources */,
 				D38B62932136E018005783B2 /* AppDelegate.swift in Sources */,
 				D3673301213823610006520B /* extension.swift in Sources */,

@@ -17,7 +17,8 @@ class CardListCollectionViewController: UICollectionViewController {
     var cardList: [Card] = []
     var rows: Int = 1
     var choosedImage = #imageLiteral(resourceName: "King404")
-    var imageArray: [UIImage] = []
+    //todo realease, supprimer image array image 1
+    var imageArray: [UIImage] = [#imageLiteral(resourceName: "King404")]
     var addDeckDetail = false
     var id = ""
 

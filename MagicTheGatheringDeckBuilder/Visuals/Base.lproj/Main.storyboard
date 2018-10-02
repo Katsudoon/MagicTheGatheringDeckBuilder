@@ -152,7 +152,7 @@ Deck Builder</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="otC-KD-Sbc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3340" y="-722"/>
+            <point key="canvasLocation" x="4305" y="-1657"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="G3A-hx-G0G">
@@ -244,7 +244,7 @@ Deck Builder</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ai2-Ja-qib" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4461.6000000000004" y="-1546.776611694153"/>
+            <point key="canvasLocation" x="5242" y="-1460"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="O9g-Xw-XyG">
@@ -279,7 +279,7 @@ Deck Builder</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cld-bP-F6h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4462" y="-723"/>
+            <point key="canvasLocation" x="5241" y="-2192"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="wFW-uy-Reb">
@@ -778,24 +778,11 @@ Deck Builder</string>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6lQ-Wo-y2a">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esz-wn-ez7">
-                                <rect key="frame" x="137" y="283.5" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="Xaz-fk-4wQ"/>
-                                    <constraint firstAttribute="height" constant="100" id="y5D-Wg-o3K"/>
-                                </constraints>
-                                <state key="normal" image="add"/>
-                                <connections>
-                                    <segue destination="RtL-CL-Z9p" kind="unwind" identifier="unwindToDeckDetailAdd" unwindAction="unwindToDeckDetailAdd:" id="OYs-Jw-eiU"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6lQ-Wo-y2a" firstAttribute="top" secondItem="pnn-pF-CMe" secondAttribute="top" id="Jmc-Xz-dlr"/>
                             <constraint firstItem="6lQ-Wo-y2a" firstAttribute="trailing" secondItem="pnn-pF-CMe" secondAttribute="trailing" id="PLk-l0-9I6"/>
-                            <constraint firstItem="esz-wn-ez7" firstAttribute="centerX" secondItem="tuw-Uh-WyY" secondAttribute="centerX" id="UOI-2w-KXb"/>
-                            <constraint firstItem="esz-wn-ez7" firstAttribute="centerY" secondItem="tuw-Uh-WyY" secondAttribute="centerY" id="Zzr-Cn-3Is"/>
                             <constraint firstItem="6lQ-Wo-y2a" firstAttribute="bottom" secondItem="pnn-pF-CMe" secondAttribute="bottom" id="gpk-Aw-z1u"/>
                             <constraint firstItem="6lQ-Wo-y2a" firstAttribute="leading" secondItem="pnn-pF-CMe" secondAttribute="leading" id="zeE-vT-LNF"/>
                         </constraints>
@@ -803,21 +790,78 @@ Deck Builder</string>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="ow3-L1-Rix">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="bNj-2x-WG3">
+                            <color key="tintColor" red="1" green="0.12822927540000001" blue="0.051942995040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="RtL-CL-Z9p" kind="unwind" identifier="unwindToDeckDetailDelete" unwindAction="unwindToDeckDetailDelete:" id="qkU-g0-UHj"/>
+                                <segue destination="hj2-CV-y6x" kind="presentation" identifier="popoverSegue" modalPresentationStyle="overCurrentContext" id="oHt-fM-GSX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addButonImage" destination="esz-wn-ez7" id="bIB-Sg-qeD"/>
                         <outlet property="cardImageDetail" destination="6lQ-Wo-y2a" id="QFH-S3-uDc"/>
                         <outlet property="deleteButonImage" destination="bNj-2x-WG3" id="Vug-m6-Rgv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HFT-tv-CDS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="RtL-CL-Z9p" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="8900" y="125.4872563718141"/>
+        </scene>
+        <!--Popover View Controller-->
+        <scene sceneID="R5t-TZ-oJt">
+            <objects>
+                <viewController id="hj2-CV-y6x" customClass="PopoverViewController" customModule="MagicTheGatheringDeckBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="a3Z-1p-4lJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYp-ys-mnq">
+                                <rect key="frame" x="62" y="318" width="250" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteSegue:" destination="hj2-CV-y6x" eventType="touchUpInside" id="0UA-YU-g9o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPT-qV-0MV">
+                                <rect key="frame" x="62" y="407" width="250" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="oCQ-97-7tp" kind="unwind" unwindAction="unwindToCardDetail:" id="o7l-st-s9v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beH-BA-oFn">
+                                <rect key="frame" x="62" y="231" width="250" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="addSegue:" destination="hj2-CV-y6x" eventType="touchUpInside" id="R1h-u2-mIX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="9cS-TF-Y63"/>
+                    </view>
+                    <connections>
+                        <segue destination="oCQ-97-7tp" kind="unwind" identifier="unwindToDeckDetailAdd" unwindAction="unwindToDeckDetailAdd:" id="60z-jR-sFg"/>
+                        <segue destination="oCQ-97-7tp" kind="unwind" identifier="unwindToDeckDetailDelete" unwindAction="unwindToDeckDetailDelete:" id="7wI-wT-0JU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aPB-Dx-XJu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="oCQ-97-7tp" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="9788" y="124.58770614692655"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rzC-dq-85v">
@@ -835,7 +879,7 @@ Deck Builder</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m3J-3G-dkw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5598" y="-723"/>
+            <point key="canvasLocation" x="3479" y="-1657"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ytn-bT-bDo">
@@ -857,7 +901,6 @@ Deck Builder</string>
         </scene>
     </scenes>
     <resources>
-        <image name="add" width="800" height="800"/>
         <image name="mtgElements" width="540" height="960"/>
         <image name="mtgLogo" width="375" height="667"/>
     </resources>

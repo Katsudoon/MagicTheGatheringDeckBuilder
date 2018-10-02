@@ -9,14 +9,12 @@
 import UIKit
 import RealmSwift
 
-class CardDetailViewController: UIViewController {
+class CardDetailViewController: UIViewController, UIPopoverPresentationControllerDelegate {
 
     @IBOutlet weak var cardImageDetail: UIImageView!
-    @IBOutlet weak var addButonImage: UIButton!
     @IBOutlet weak var deleteButonImage: UIBarButtonItem!
     
     var addDeckDetail = false
-    var deleteDeckDetail = false
     let realm = try! Realm()
     var id = ""
     
@@ -26,47 +24,31 @@ class CardDetailViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if addDeckDetail == false && deleteDeckDetail == false{
-            addButonImage.alpha = 0
-            addButonImage.isEnabled = false
+        if addDeckDetail == false {
             deleteButonImage.isEnabled = false
         }
 
-        if deleteDeckDetail == false && addDeckDetail == true{
-            deleteButonImage.isEnabled = false
-        }
-        
-        if deleteDeckDetail == true && addDeckDetail == false{
-            addButonImage.alpha = 0
-            addButonImage.isEnabled = false
+        if addDeckDetail == true{
+            deleteButonImage.isEnabled = true
         }
     }
-
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "unwindToDeckDetailAdd" {
-            let controller = segue.destination as! DeckDetailViewController
-            let card = CardDB()
-            try! realm.write {
-                card.id = id
-                card.image = UIImagePNGRepresentation(cardImageDetail.image!)
-                controller.deck.cards.append(card)
-            }
-            
-        } else {
-            let controller = segue.destination as! DeckDetailViewController
-            controller.loadViewIfNeeded()
-            var idArray: [String] = []
-            let cardArray = controller.deck.cards
-            for c in cardArray {
-                idArray.append(c.id!)
-            }
-            let index = idArray.index(of: id)
-            try! realm.write {
-                controller.deck.cards.remove(at: index!)
-            }
-            
+        
+        if segue.identifier == "popoverSegue" {
+            let popoverViewController = segue.destination as! PopoverViewController
+            popoverViewController.modalPresentationStyle = UIModalPresentationStyle.popover
+            popoverViewController.popoverPresentationController!.delegate = self
+            popoverViewController.cardImage = cardImageDetail.image
+            popoverViewController.id = id
         }
+        
+    }
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.none
+    }
+    
+    @IBAction func unwindToCardDetail(_ sender: UIStoryboardSegue) {
         
     }
     

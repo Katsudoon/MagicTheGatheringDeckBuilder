@@ -55,8 +55,8 @@ class DeckDetailViewController: UIViewController, UICollectionViewDataSource, UI
             let controller = segue.destination as! CardDetailViewController
             controller.loadViewIfNeeded()
             controller.id = id
+            controller.addDeckDetail = true
             controller.cardImageDetail.image = choosedImage
-            controller.deleteDeckDetail = true
         }else {
             
         }

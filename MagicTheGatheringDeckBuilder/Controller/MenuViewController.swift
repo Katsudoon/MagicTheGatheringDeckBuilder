@@ -22,6 +22,7 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func createModifyDeck(_ sender: Any) {
+        
         performSegue(withIdentifier: "fromMenuToDeckViewSegue", sender: self)
     }
     
