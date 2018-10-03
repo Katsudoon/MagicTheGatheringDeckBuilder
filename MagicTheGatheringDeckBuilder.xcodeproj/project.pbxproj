@@ -21,6 +21,7 @@
 		D36732F521381A410006520B /* MAGIC.TTF in Resources */ = {isa = PBXBuildFile; fileRef = D36732F421381A410006520B /* MAGIC.TTF */; };
 		D36732F721381E700006520B /* LoginMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36732F621381E700006520B /* LoginMenuViewController.swift */; };
 		D3673301213823610006520B /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3673300213823610006520B /* extension.swift */; };
+		D36BFC2E2164AD7F00E3396B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D36BFC2C2164AD7E00E3396B /* GoogleService-Info.plist */; };
 		D38B62932136E018005783B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38B62922136E018005783B2 /* AppDelegate.swift */; };
 		D38B62952136E018005783B2 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38B62942136E018005783B2 /* LaunchScreenViewController.swift */; };
 		D38B62982136E018005783B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D38B62962136E018005783B2 /* Main.storyboard */; };
@@ -93,6 +94,7 @@
 		D36732F421381A410006520B /* MAGIC.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = MAGIC.TTF; sourceTree = "<group>"; };
 		D36732F621381E700006520B /* LoginMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMenuViewController.swift; sourceTree = "<group>"; };
 		D3673300213823610006520B /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		D36BFC2C2164AD7E00E3396B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D38B628F2136E018005783B2 /* MagicTheGatheringDeckBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicTheGatheringDeckBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38B62922136E018005783B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D38B62942136E018005783B2 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				D38B62A42136E03B005783B2 /* Cartfile */,
+				D36BFC2C2164AD7E00E3396B /* GoogleService-Info.plist */,
 				D38B62922136E018005783B2 /* AppDelegate.swift */,
 			);
 			path = App;
@@ -345,6 +348,7 @@
 				D36732F521381A410006520B /* MAGIC.TTF in Resources */,
 				D38B62982136E018005783B2 /* Main.storyboard in Resources */,
 				D36732F32137D5FA0006520B /* magicthegathering in Resources */,
+				D36BFC2E2164AD7F00E3396B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,13 +380,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MagicTheGatheringDeckBuilder/Pods-MagicTheGatheringDeckBuilder-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

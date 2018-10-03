@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import RealmSwift
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
@@ -23,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         locationmanager.requestAlwaysAuthorization()
         locationmanager.delegate = self
         locationmanager.startUpdatingLocation()
+        
+        FirebaseApp.configure()
         
         let config = Realm.Configuration(
             // Set the new schema version. This must be greater than the previously used

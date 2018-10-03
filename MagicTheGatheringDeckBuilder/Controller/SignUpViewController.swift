@@ -8,12 +8,13 @@
 
 import UIKit
 import RealmSwift
+import Firebase
 
 class SignUpViewController: UIViewController {
     
-    @IBOutlet weak var nicknameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var mailTextField: UITextField!
+    @IBOutlet weak var signUpButton: UIButton!
     
     let realm = try! Realm()
     
@@ -28,13 +29,9 @@ class SignUpViewController: UIViewController {
     
     @IBAction func validateButton(_ sender: Any) {
         
-        let nick = nicknameTextField.text
         let pass = passwordTextField.text
         let mail = mailTextField.text
         
-        guard nick != "" else {
-            return
-        }
         guard pass != "" else {
             return
         }
@@ -42,12 +39,16 @@ class SignUpViewController: UIViewController {
             return
         }
 
-        let user = User()
-        user.nickname = nick!
-        user.password = pass!
-        user.mail = mail!
+        Auth.auth().createUser(withEmail: mail!, password: pass!) { (authResult, error) in
+            
+            guard let user = authResult?.user else { return }
+            
+            self.performSegue(withIdentifier: "unwindToMenu", sender: self.signUpButton)
+        }
 
-        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }
     
