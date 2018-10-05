@@ -9,6 +9,7 @@ target 'MagicTheGatheringDeckBuilder' do
   pod 'RealmSwift'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'FirebaseInstanceID'
 
 
 end

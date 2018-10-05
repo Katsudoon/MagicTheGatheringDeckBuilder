@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 class CardDetailViewController: UIViewController, UIPopoverPresentationControllerDelegate {
-
+    
     @IBOutlet weak var cardImageDetail: UIImageView!
     @IBOutlet weak var deleteButonImage: UIBarButtonItem!
     
@@ -19,22 +19,24 @@ class CardDetailViewController: UIViewController, UIPopoverPresentationControlle
     var id = ""
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         if addDeckDetail == false {
             deleteButonImage.isEnabled = false
         }
-
+        
         if addDeckDetail == true{
             deleteButonImage.isEnabled = true
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "popoverSegue" {
             let popoverViewController = segue.destination as! PopoverViewController
             popoverViewController.modalPresentationStyle = UIModalPresentationStyle.popover
@@ -42,17 +44,12 @@ class CardDetailViewController: UIViewController, UIPopoverPresentationControlle
             popoverViewController.cardImage = cardImageDetail.image
             popoverViewController.id = id
         }
-        
     }
+    
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
         return UIModalPresentationStyle.none
     }
     
     @IBAction func unwindToCardDetail(_ sender: UIStoryboardSegue) {
-        
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 }

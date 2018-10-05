@@ -10,7 +10,7 @@ import UIKit
 import MTGSDKSwift
 
 class CardCollectionViewCell: UICollectionViewCell {
- 
+    
     @IBOutlet weak var cardImage: UIImageView!
     
     let imageArray = [#imageLiteral(resourceName: "King404"),#imageLiteral(resourceName: "goblin404"),#imageLiteral(resourceName: "Nicol404"),#imageLiteral(resourceName: "Blast404")]
@@ -22,5 +22,4 @@ class CardCollectionViewCell: UICollectionViewCell {
             cardImage.image = cardImg
         }
     }
-    
 }

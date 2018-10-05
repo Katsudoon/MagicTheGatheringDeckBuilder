@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dCj-Vy-6ht">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -72,7 +72,7 @@ Deck Builder</string>
             </objects>
             <point key="canvasLocation" x="3340" y="125"/>
         </scene>
-        <!--Login Menu View Controller-->
+        <!--Login-->
         <scene sceneID="ciS-8y-wRg">
             <objects>
                 <viewController id="Emy-H6-8zT" customClass="LoginMenuViewController" customModule="MagicTheGatheringDeckBuilder" customModuleProvider="target" sceneMemberID="viewController">
@@ -140,16 +140,24 @@ Deck Builder</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f6D-uk-Tt6"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zL9-fb-3bg"/>
+                    <navigationItem key="navigationItem" title="Login" id="dua-sF-w4B">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hmH-eV-rss">
+                            <connections>
+                                <action selector="cancel:" destination="Emy-H6-8zT" id="1c0-WA-yAj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="backgroundLogin" destination="EZY-X3-hau" id="lvS-WZ-brE"/>
                         <outlet property="loginButtonLogin" destination="UWx-OZ-9PB" id="ViA-tB-4wp"/>
                         <outlet property="signupButtonLogin" destination="x5D-ZT-dYf" id="BsR-O3-dNY"/>
                         <outlet property="texteLogin" destination="odk-x3-m1m" id="Snw-Hh-ydU"/>
                         <outlet property="titreLogin" destination="bdb-yy-dMV" id="e6Z-Un-MRH"/>
+                        <segue destination="Hqv-mt-PR0" kind="unwind" identifier="unwindToMenu" unwindAction="unwindToMenu:" id="dgh-4a-agZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="otC-KD-Sbc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Hqv-mt-PR0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4305" y="-1657"/>
         </scene>
@@ -200,7 +208,7 @@ Deck Builder</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xZj-6a-62b">
                                 <rect key="frame" x="153" y="374" width="206" height="30"/>
@@ -223,10 +231,10 @@ Deck Builder</string>
                         <viewLayoutGuide key="safeArea" id="MiI-OF-X3S"/>
                     </view>
                     <connections>
-                        <outlet property="mailTextField" destination="xZj-6a-62b" id="P6K-ON-se8"/>
-                        <outlet property="passwordTextField" destination="bdQ-lK-R7q" id="afN-nm-Rab"/>
+                        <outlet property="mailTextField" destination="bdQ-lK-R7q" id="oQJ-5h-Y0c"/>
+                        <outlet property="passwordTextField" destination="xZj-6a-62b" id="yfE-mr-PCN"/>
                         <outlet property="signUpButton" destination="gGh-Cc-Qxk" id="aH8-VY-YTZ"/>
-                        <segue destination="J12-GW-31A" kind="unwind" identifier="unwindeToMenu" unwindAction="unwindeToMenu:" id="8K5-Fn-toG"/>
+                        <segue destination="J12-GW-31A" kind="unwind" identifier="unwindToMenu" unwindAction="unwindToMenu:" id="8K5-Fn-toG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ai2-Ja-qib" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -244,6 +252,7 @@ Deck Builder</string>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mtgElements" translatesAutoresizingMaskIntoConstraints="NO" id="CyZ-T6-DH9">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0EO-Ka-F15">
                                 <rect key="frame" x="40" y="124" width="295" height="41"/>
@@ -251,34 +260,6 @@ Deck Builder</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mail" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5th-kX-Qbf">
-                                <rect key="frame" x="0.0" y="287" width="145" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Magic:theGathering" family="Magic:the Gathering" pointSize="30"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8f-Cd-bVE">
-                                <rect key="frame" x="0.0" y="339" width="145" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Magic:theGathering" family="Magic:the Gathering" pointSize="30"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j9R-rY-Erg">
-                                <rect key="frame" x="153" y="344" width="206" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Drt-zo-mkZ">
-                                <rect key="frame" x="153" y="292" width="206" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90J-Hi-P6o">
                                 <rect key="frame" x="161" y="589" width="57" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -288,8 +269,37 @@ Deck Builder</string>
                                 </state>
                                 <connections>
                                     <action selector="validateButton:" destination="wPP-hW-mfC" eventType="touchUpInside" id="B19-UL-PvK"/>
+                                    <action selector="validateButton:" destination="PNS-Lp-psp" eventType="touchUpInside" id="V7o-SJ-JpY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mail" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5th-kX-Qbf">
+                                <rect key="frame" x="0.0" y="319" width="145" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Magic:theGathering" family="Magic:the Gathering" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8f-Cd-bVE">
+                                <rect key="frame" x="0.0" y="371" width="145" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Magic:theGathering" family="Magic:the Gathering" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j9R-rY-Erg">
+                                <rect key="frame" x="153" y="376" width="206" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Drt-zo-mkZ">
+                                <rect key="frame" x="153" y="324" width="206" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
@@ -303,8 +313,15 @@ Deck Builder</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="e4H-y6-teC"/>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="90J-Hi-P6o" id="qfK-KC-zup"/>
+                        <outlet property="mailTextField" destination="Drt-zo-mkZ" id="Hnk-0v-5qo"/>
+                        <outlet property="passwordTextField" destination="j9R-rY-Erg" id="tpH-SR-PwA"/>
+                        <segue destination="0rK-w9-sle" kind="unwind" identifier="unwindToMenu" unwindAction="unwindToMenu:" id="NOk-BO-yXS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cld-bP-F6h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="0rK-w9-sle" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5241" y="-2192"/>
         </scene>
@@ -394,7 +411,11 @@ Deck Builder</string>
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2rg-rd-5Xd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uMO-2n-LgV">
                             <rect key="frame" x="0.0" y="132" width="375" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -415,11 +436,13 @@ Deck Builder</string>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Color ex : white" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3C5-bP-4qC">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="3C5-bP-4qC" firstAttribute="top" secondItem="vQK-8R-csl" secondAttribute="top" id="0La-mg-Q5c"/>
                                                 <constraint firstAttribute="trailing" secondItem="3C5-bP-4qC" secondAttribute="trailing" id="ELg-dU-hfr"/>
@@ -427,6 +450,8 @@ Deck Builder</string>
                                                 <constraint firstAttribute="bottom" secondItem="3C5-bP-4qC" secondAttribute="bottom" id="ZJl-Qi-n29"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="valueCell" id="PCw-2Z-ASj">
                                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -506,6 +531,13 @@ Deck Builder</string>
                                     <outlet property="delegate" destination="EaC-KF-FWc" id="dgd-r8-gtE"/>
                                 </connections>
                             </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6i-bf-SHk">
+                                <rect key="frame" x="139" y="503" width="91" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="yby-1l-bIe"/>
@@ -606,20 +638,19 @@ Deck Builder</string>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EVo-99-bzv">
                                 <rect key="frame" x="117" y="83" width="242" height="30"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deck Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oC9-OT-i8v">
                                 <rect key="frame" x="16" y="88" width="77" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5X-3P-F0o">
                                 <rect key="frame" x="16" y="139" width="88" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EIv-8r-B4J">
@@ -636,7 +667,7 @@ Deck Builder</string>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UrR-30-j14">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="438"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="M3l-Sm-6wD">
                                             <size key="itemSize" width="146" height="227"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -676,7 +707,7 @@ Deck Builder</string>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUe-fu-Uy9">
                                                             <rect key="frame" x="37" y="103" width="72" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -703,7 +734,7 @@ Deck Builder</string>
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="f5X-3P-F0o" firstAttribute="leading" secondItem="yJO-Pp-7aN" secondAttribute="leading" constant="16" id="3Ki-dl-Ce4"/>
                             <constraint firstItem="EVo-99-bzv" firstAttribute="leading" secondItem="oC9-OT-i8v" secondAttribute="trailing" constant="24" id="5kw-JT-ICV"/>
@@ -750,7 +781,7 @@ Deck Builder</string>
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="sZF-jT-rcI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="631-KA-4Rd">
                             <size key="itemSize" width="165" height="265"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -804,6 +835,7 @@ Deck Builder</string>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6lQ-Wo-y2a">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -816,8 +848,8 @@ Deck Builder</string>
                         <viewLayoutGuide key="safeArea" id="pnn-pF-CMe"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="ow3-L1-Rix">
-                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="bNj-2x-WG3">
-                            <color key="tintColor" red="1" green="0.12822927540000001" blue="0.051942995040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="bNj-2x-WG3">
+                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="hj2-CV-y6x" kind="presentation" identifier="popoverSegue" modalPresentationStyle="overCurrentContext" id="oHt-fM-GSX"/>
                             </connections>
@@ -933,6 +965,6 @@ Deck Builder</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YFh-OK-m4l"/>
-        <segue reference="NeE-zT-Rd9"/>
+        <segue reference="nD7-Cc-OXb"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -16,16 +16,13 @@ class PopoverViewController: UIViewController {
     let realm = try! Realm()
     var id = ""
     var cardImage: UIImage!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -38,7 +35,7 @@ class PopoverViewController: UIViewController {
                 controller.deck.cards.append(card)
             }
         }
-
+        
         if segue.identifier == "unwindToDeckDetailDelete" {
             let controller = segue.destination as! DeckDetailViewController
             controller.loadViewIfNeeded()
@@ -57,9 +54,9 @@ class PopoverViewController: UIViewController {
     @IBAction func addSegue(_ sender: Any) {
         performSegue(withIdentifier: "unwindToDeckDetailAdd", sender: self)
     }
-
+    
     @IBAction func deleteSegue(_ sender: Any) {
         performSegue(withIdentifier: "unwindToDeckDetailDelete", sender: self)
     }
-
+    
 }

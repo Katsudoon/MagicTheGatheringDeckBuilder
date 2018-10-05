@@ -16,24 +16,22 @@ extension Array {
     }
 }
 
+//----Fonctione de fondue----//
 extension UIViewController {
-    
     func fondue(fadeViews: [UIView], scaleViews: [UIView], delai: TimeInterval, secondes : TimeInterval, options:UIViewAnimationOptions,  alpha: CGFloat, transform: CGFloat, sender: String) {
-        
-                UIView.animate(withDuration: secondes, delay: delai, options: options, animations: {
-                    for element in fadeViews {
-                    element.alpha = alpha
-                    }
-                    for element in scaleViews {
-                    element.transform = CGAffineTransform(scaleX: transform, y: transform)
-                    }
-                }, completion: {(Bool) -> Void in
-                switch sender {
-                case "launch": self.performSegue(withIdentifier: "fromLaunchToMenuSegue", sender: self)
-                default: print("")
+        UIView.animate(withDuration: secondes, delay: delai, options: options, animations: {
+            for element in fadeViews {
+                element.alpha = alpha
+            }
+            for element in scaleViews {
+                element.transform = CGAffineTransform(scaleX: transform, y: transform)
+            }
+        }, completion: {(Bool) -> Void in
+            switch sender {
+            case "launch": self.performSegue(withIdentifier: "fromLaunchToMenuSegue", sender: self)
+            default: print("")
             }
         })
     }
 }
-
-
+//----//

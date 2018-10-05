@@ -17,19 +17,16 @@ class CardListCollectionViewController: UICollectionViewController {
     var cardList: [Card] = []
     var rows: Int = 1
     var choosedImage = #imageLiteral(resourceName: "King404")
-    //todo realease, supprimer image array image 1
     var imageArray: [UIImage] = [#imageLiteral(resourceName: "King404")]
     var addDeckDetail = false
     var id = ""
-
     var color = CardSearchParameter(parameterType: .colors, value: "white")
     var cmc = CardSearchParameter(parameterType: .cmc, value: "1")
     var setCode = CardSearchParameter(parameterType: .set, value: "AER")
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,13 +43,14 @@ class CardListCollectionViewController: UICollectionViewController {
                         self.cardList += [c]
                     }
                     self.rows = self.cardList.count
-                    
                     self.collectionView?.reloadData()
                 }
-                
             }
         }
-       
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -62,33 +60,27 @@ class CardListCollectionViewController: UICollectionViewController {
         controller.cardImageDetail.image = choosedImage
         controller.id = id
     }
- 
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         choosedImage = imageArray[indexPath.row]
         id = cardList[indexPath.row].id!
         performSegue(withIdentifier: "fromCardListToCardDetail", sender: self)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return rows
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardDetail", for: indexPath) as! CardCollectionViewCell
-
         if cell.cardImage.image == nil {
             magic.fetchCards([color,cmc,setCode]) {
                 cards, error in
+                //----population du deck de facon async----//
                 DispatchQueue.main.async {
                     let card = cards![indexPath.row]
                     if let error = error {
@@ -103,13 +95,11 @@ class CardListCollectionViewController: UICollectionViewController {
                         if img != nil {
                             self.imageArray.append(img!)
                         }
-                        
                     }
                 }
+                //----//
             }
         }
-        
-
         return cell
     }
 }

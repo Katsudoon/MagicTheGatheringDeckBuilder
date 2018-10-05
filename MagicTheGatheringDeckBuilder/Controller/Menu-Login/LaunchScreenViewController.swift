@@ -9,6 +9,7 @@
 import UIKit
 
 class LaunchScreenViewController: UIViewController {
+    
     @IBOutlet weak var titreLaunchScreen: UILabel!
     @IBOutlet weak var boutonLaunchScreen: UIButton!
     @IBOutlet weak var backgroundLaunchScreen: UIImageView!
@@ -20,16 +21,15 @@ class LaunchScreenViewController: UIViewController {
         fondue(fadeViews: [backgroundLaunchScreen, boutonLaunchScreen, titreLaunchScreen], scaleViews: [boutonLaunchScreen, titreLaunchScreen], delai: 0, secondes: 0, options: .curveEaseInOut, alpha: 0, transform: 0.5, sender: button)
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         fondue(fadeViews: [backgroundLaunchScreen, boutonLaunchScreen, titreLaunchScreen], scaleViews: [boutonLaunchScreen, titreLaunchScreen], delai: 0, secondes: 3, options: .curveEaseInOut, alpha: 1, transform: 1, sender: button)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
     @IBAction func fromLaunchTomenuSegue(_ sender: Any) {
         button = "launch"
         fondue(fadeViews: [backgroundLaunchScreen, boutonLaunchScreen, titreLaunchScreen], scaleViews: [boutonLaunchScreen, titreLaunchScreen], delai: 0, secondes: 2, options: .curveEaseInOut, alpha: 0, transform: 1, sender: button)

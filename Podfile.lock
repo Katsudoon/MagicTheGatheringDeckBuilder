@@ -67,6 +67,7 @@ PODS:
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
+  - FirebaseInstanceID
   - RealmSwift
 
 SPEC REPOS:
@@ -98,6 +99,6 @@ SPEC CHECKSUMS:
   Realm: 85ab9e4f779d66f6e9ffeb118dc25b7f130c96ac
   RealmSwift: 69121c8b86d0ae005fb779efdb10e606732e1c74
 
-PODFILE CHECKSUM: c2f25ae7b8c0601339c171e3eddd8e4afefc64d2
+PODFILE CHECKSUM: f98a3419c474d560f53ab617079b3d9dc7932488
 
 COCOAPODS: 1.5.3

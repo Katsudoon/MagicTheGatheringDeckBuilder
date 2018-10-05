@@ -8,20 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		B5ECFA61D030AA3CE65963F3 /* Pods_MagicTheGatheringDeckBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384E9BE0717D6FC3006E0502 /* Pods_MagicTheGatheringDeckBuilder.framework */; };
-		D32140E621469B1B0006E3E6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32140E521469B1B0006E3E6 /* User.swift */; };
 		D322DB25214003D2005FDA51 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = D322DB24214003D2005FDA51 /* Deck.swift */; };
 		D33803D72146701000CE8E99 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33803D62146701000CE8E99 /* Constants.swift */; };
 		D3560135213FCE1A00AAC14F /* MTGSDKSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3590DB92136EB180081576A /* MTGSDKSwift.framework */; };
 		D3560136213FCE1A00AAC14F /* MTGSDKSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3590DB92136EB180081576A /* MTGSDKSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D362A2472147B1B00070EE0D /* CardDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362A2462147B1B00070EE0D /* CardDB.swift */; };
 		D362A24C2147BE370070EE0D /* DeckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362A24B2147BE370070EE0D /* DeckTableViewCell.swift */; };
-		D362A24E2147C9B60070EE0D /* CustomDictionnary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362A24D2147C9B60070EE0D /* CustomDictionnary.swift */; };
 		D362A25021480B190070EE0D /* DeckDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362A24F21480B190070EE0D /* DeckDetailViewController.swift */; };
+		D366E933216614690059782B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D366E932216614690059782B /* GoogleService-Info.plist */; };
 		D36732F32137D5FA0006520B /* magicthegathering in Resources */ = {isa = PBXBuildFile; fileRef = D36732F22137D5FA0006520B /* magicthegathering */; };
 		D36732F521381A410006520B /* MAGIC.TTF in Resources */ = {isa = PBXBuildFile; fileRef = D36732F421381A410006520B /* MAGIC.TTF */; };
 		D36732F721381E700006520B /* LoginMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36732F621381E700006520B /* LoginMenuViewController.swift */; };
 		D3673301213823610006520B /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3673300213823610006520B /* extension.swift */; };
-		D36BFC2E2164AD7F00E3396B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D36BFC2C2164AD7E00E3396B /* GoogleService-Info.plist */; };
 		D38B62932136E018005783B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38B62922136E018005783B2 /* AppDelegate.swift */; };
 		D38B62952136E018005783B2 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38B62942136E018005783B2 /* LaunchScreenViewController.swift */; };
 		D38B62982136E018005783B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D38B62962136E018005783B2 /* Main.storyboard */; };
@@ -82,19 +80,17 @@
 		384E9BE0717D6FC3006E0502 /* Pods_MagicTheGatheringDeckBuilder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagicTheGatheringDeckBuilder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EB0553EBD5BFB4AA82405D7 /* Pods-MagicTheGatheringDeckBuilder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicTheGatheringDeckBuilder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MagicTheGatheringDeckBuilder/Pods-MagicTheGatheringDeckBuilder.debug.xcconfig"; sourceTree = "<group>"; };
 		A6AD639AEAC188EACEC084D2 /* Pods-MagicTheGatheringDeckBuilder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicTheGatheringDeckBuilder.release.xcconfig"; path = "Pods/Target Support Files/Pods-MagicTheGatheringDeckBuilder/Pods-MagicTheGatheringDeckBuilder.release.xcconfig"; sourceTree = "<group>"; };
-		D32140E521469B1B0006E3E6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D322DB24214003D2005FDA51 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		D33803D62146701000CE8E99 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D3590DB32136EB180081576A /* MTGSDKSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MTGSDKSwift.xcodeproj; path = "mtg-sdk-swift-master/MTGSDKSwift.xcodeproj"; sourceTree = "<group>"; };
 		D362A2462147B1B00070EE0D /* CardDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDB.swift; sourceTree = "<group>"; };
 		D362A24B2147BE370070EE0D /* DeckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckTableViewCell.swift; sourceTree = "<group>"; };
-		D362A24D2147C9B60070EE0D /* CustomDictionnary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDictionnary.swift; sourceTree = "<group>"; };
 		D362A24F21480B190070EE0D /* DeckDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckDetailViewController.swift; sourceTree = "<group>"; };
+		D366E932216614690059782B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D36732F22137D5FA0006520B /* magicthegathering */ = {isa = PBXFileReference; lastKnownFileType = folder; path = magicthegathering; sourceTree = "<group>"; };
 		D36732F421381A410006520B /* MAGIC.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = MAGIC.TTF; sourceTree = "<group>"; };
 		D36732F621381E700006520B /* LoginMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMenuViewController.swift; sourceTree = "<group>"; };
 		D3673300213823610006520B /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
-		D36BFC2C2164AD7E00E3396B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D38B628F2136E018005783B2 /* MagicTheGatheringDeckBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicTheGatheringDeckBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38B62922136E018005783B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D38B62942136E018005783B2 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
@@ -166,18 +162,10 @@
 		D36732F821381F1B0006520B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D38B62942136E018005783B2 /* LaunchScreenViewController.swift */,
-				D36732F621381E700006520B /* LoginMenuViewController.swift */,
-				D3C604FB213E841E00EFB9CE /* LoginViewController.swift */,
-				D3C604FD213E842B00EFB9CE /* SignUpViewController.swift */,
-				D3C604F7213E83CE00EFB9CE /* MenuViewController.swift */,
-				D3C6050C213E907800EFB9CE /* DeckListTableViewController.swift */,
-				D362A24F21480B190070EE0D /* DeckDetailViewController.swift */,
-				D3C6050E213E909100EFB9CE /* CardFilterTableViewController.swift */,
-				D3C60512213E90AF00EFB9CE /* CardListCollectionViewController.swift */,
-				D3C60508213E902100EFB9CE /* CardDetailViewController.swift */,
-				D3C6050A213E902A00EFB9CE /* MapViewController.swift */,
-				D3CD627A2163764600BE24F4 /* PopoverViewController.swift */,
+				D3697B3C21674F24001A5A04 /* Map */,
+				D3697B3B21674F1D001A5A04 /* Cards */,
+				D3697B3A21674F13001A5A04 /* Deck */,
+				D3697B3921674EFE001A5A04 /* Menu-Login */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -196,7 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				D38B62A42136E03B005783B2 /* Cartfile */,
-				D36BFC2C2164AD7E00E3396B /* GoogleService-Info.plist */,
 				D38B62922136E018005783B2 /* AppDelegate.swift */,
 			);
 			path = App;
@@ -209,6 +196,46 @@
 				D33803D62146701000CE8E99 /* Constants.swift */,
 			);
 			path = ToolBox;
+			sourceTree = "<group>";
+		};
+		D3697B3921674EFE001A5A04 /* Menu-Login */ = {
+			isa = PBXGroup;
+			children = (
+				D38B62942136E018005783B2 /* LaunchScreenViewController.swift */,
+				D36732F621381E700006520B /* LoginMenuViewController.swift */,
+				D3C604FB213E841E00EFB9CE /* LoginViewController.swift */,
+				D3C604FD213E842B00EFB9CE /* SignUpViewController.swift */,
+				D3C604F7213E83CE00EFB9CE /* MenuViewController.swift */,
+			);
+			path = "Menu-Login";
+			sourceTree = "<group>";
+		};
+		D3697B3A21674F13001A5A04 /* Deck */ = {
+			isa = PBXGroup;
+			children = (
+				D3C6050C213E907800EFB9CE /* DeckListTableViewController.swift */,
+				D362A24F21480B190070EE0D /* DeckDetailViewController.swift */,
+			);
+			path = Deck;
+			sourceTree = "<group>";
+		};
+		D3697B3B21674F1D001A5A04 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				D3C6050E213E909100EFB9CE /* CardFilterTableViewController.swift */,
+				D3C60512213E90AF00EFB9CE /* CardListCollectionViewController.swift */,
+				D3C60508213E902100EFB9CE /* CardDetailViewController.swift */,
+				D3CD627A2163764600BE24F4 /* PopoverViewController.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		D3697B3C21674F24001A5A04 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				D3C6050A213E902A00EFB9CE /* MapViewController.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		D38B62862136E018005783B2 = {
@@ -240,6 +267,7 @@
 				D36732F821381F1B0006520B /* Controller */,
 				D36732F921381F2A0006520B /* Visuals */,
 				D38B629E2136E019005783B2 /* Info.plist */,
+				D366E932216614690059782B /* GoogleService-Info.plist */,
 			);
 			path = MagicTheGatheringDeckBuilder;
 			sourceTree = "<group>";
@@ -250,9 +278,7 @@
 				D3C60515213EB7E400EFB9CE /* CardCollectionViewCell.swift */,
 				D362A24B2147BE370070EE0D /* DeckTableViewCell.swift */,
 				D322DB24214003D2005FDA51 /* Deck.swift */,
-				D32140E521469B1B0006E3E6 /* User.swift */,
 				D362A2462147B1B00070EE0D /* CardDB.swift */,
-				D362A24D2147C9B60070EE0D /* CustomDictionnary.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -348,7 +374,7 @@
 				D36732F521381A410006520B /* MAGIC.TTF in Resources */,
 				D38B62982136E018005783B2 /* Main.storyboard in Resources */,
 				D36732F32137D5FA0006520B /* magicthegathering in Resources */,
-				D36BFC2E2164AD7F00E3396B /* GoogleService-Info.plist in Resources */,
+				D366E933216614690059782B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,10 +439,8 @@
 				D3C60516213EB7E400EFB9CE /* CardCollectionViewCell.swift in Sources */,
 				D3C6050F213E909100EFB9CE /* CardFilterTableViewController.swift in Sources */,
 				D3C6050D213E907800EFB9CE /* DeckListTableViewController.swift in Sources */,
-				D32140E621469B1B0006E3E6 /* User.swift in Sources */,
 				D362A25021480B190070EE0D /* DeckDetailViewController.swift in Sources */,
 				D33803D72146701000CE8E99 /* Constants.swift in Sources */,
-				D362A24E2147C9B60070EE0D /* CustomDictionnary.swift in Sources */,
 				D3C6050B213E902A00EFB9CE /* MapViewController.swift in Sources */,
 				D3C604F8213E83CE00EFB9CE /* MenuViewController.swift in Sources */,
 				D38B62952136E018005783B2 /* LaunchScreenViewController.swift in Sources */,

@@ -13,6 +13,5 @@ class CardDB: Object {
     
     @objc dynamic var image: Data?
     @objc dynamic var id: String?
-
+    
 }
-

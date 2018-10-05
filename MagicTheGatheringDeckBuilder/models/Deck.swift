@@ -16,6 +16,5 @@ class Deck: Object  {
     @objc dynamic var name: String = ""
     @objc dynamic var descriptions: String = ""
     var cards = RealmSwift.List<CardDB>()
+    
 }
-
-

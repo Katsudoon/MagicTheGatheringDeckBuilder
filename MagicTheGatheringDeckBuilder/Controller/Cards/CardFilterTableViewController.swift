@@ -15,9 +15,13 @@ class CardFilterTableViewController: UITableViewController {
     @IBOutlet weak var cardSet: UITextField!
     
     var addDeckDetail = false
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     @IBAction func trouverButton(_ sender: Any) {
@@ -27,7 +31,7 @@ class CardFilterTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as! CardListCollectionViewController
         controller.addDeckDetail = addDeckDetail
-
+        
         if let color = cardColor.text {
             controller.color.value = color.lowercased()
         } else {
@@ -43,11 +47,7 @@ class CardFilterTableViewController: UITableViewController {
         } else {
             controller.setCode.value = ""
         }
-
+        
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
 }

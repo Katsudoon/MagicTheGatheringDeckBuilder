@@ -11,34 +11,33 @@ import Firebase
 
 
 class MenuViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    
+    //----Si user authentifié, go deck sinon go login----//
     
     @IBAction func createModifyDeck(_ sender: Any) {
-        performSegue(withIdentifier: "fromMenuToLoginSegue", sender: self)
-        //performSegue(withIdentifier: "fromMenuToDeckViewSegue", sender: self)
+        let user = Auth.auth().currentUser;
+        if ((user) != nil) {
+            performSegue(withIdentifier: "fromMenuToDeckViewSegue", sender: self)
+        } else {
+            performSegue(withIdentifier: "fromMenuToLoginSegue", sender: self)
+        }
     }
     
-
+    //----//
+    
     @IBAction func shareDeck(_ sender: Any) {
         performSegue(withIdentifier: "fromMenuToMapSegue", sender: self)
     }
     
-    @IBAction func unwindeToMenu(_ sender: UIStoryboardSegue) {
-        
+    @IBAction func unwindToMenu(_ sender: UIStoryboardSegue) {
     }
-
+    
 }

@@ -22,7 +22,6 @@ class DeckDetailViewController: UIViewController, UICollectionViewDataSource, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         titleDeckEditable.text = deck.name
         descriptionDeckEditable.text = deck.descriptions
     }
@@ -31,7 +30,7 @@ class DeckDetailViewController: UIViewController, UICollectionViewDataSource, UI
         collection.reloadData()
     }
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -58,7 +57,6 @@ class DeckDetailViewController: UIViewController, UICollectionViewDataSource, UI
             controller.addDeckDetail = true
             controller.cardImageDetail.image = choosedImage
         }else {
-            
         }
     }
     
@@ -66,20 +64,16 @@ class DeckDetailViewController: UIViewController, UICollectionViewDataSource, UI
         return 1
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return deck.cards.count + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
         if indexPath.row == deck.cards.count{
-         
             let cellAdd = collectionView.dequeueReusableCell(withReuseIdentifier: "deckDetailAdd", for: indexPath) as! CardCollectionViewCell
             return cellAdd
-         
-         } else {
-         
+        } else {
+            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "deckDetail", for: indexPath) as! CardCollectionViewCell
             let data = deck.cards[indexPath.row].image
             let image = UIImage(data: data!)
@@ -87,7 +81,7 @@ class DeckDetailViewController: UIViewController, UICollectionViewDataSource, UI
             return cell
         }
     }
-
+    
     @IBAction func validateButton(_ sender: Any) {
         let realm = try! Realm()
         if modif == false {
@@ -102,16 +96,12 @@ class DeckDetailViewController: UIViewController, UICollectionViewDataSource, UI
                 deck.descriptions = descriptionDeckEditable.text
             }
         }
-    
         performSegue(withIdentifier: "unwindSegueToDeckList", sender: self)
     }
     
     @IBAction func unwindToDeckDetailAdd(_ sender: UIStoryboardSegue) {
-        
     }
     
     @IBAction func unwindToDeckDetailDelete(_ sender: UIStoryboardSegue) {
-        
     }
-    
 }
